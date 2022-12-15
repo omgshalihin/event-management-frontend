@@ -1,0 +1,33 @@
+/* nav {
+  margin: 10px auto 10px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-bottom: 1px solid #ddd;
+}
+nav a {
+  font-size: 1.5em;
+  margin: 10px 20px 0 20px;
+}
+
+nav a:hover {
+  color: #4979ff;
+}
+nav .logo {
+  margin-right: auto;
+} */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto 10px;
+  padding: 10px 0;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  margin-right: auto;
+}
