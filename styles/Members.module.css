@@ -2,9 +2,10 @@
   padding: 2px 16px;
   background: black;
   display: block;
-  margin: 20px 10px;
+  margin: 0px 10px;
   border-left: 8px solid black;
   max-width: 100%;
+  margin-left: 0;
 }
 
 .going .single:hover {
@@ -13,15 +14,16 @@
 
 .members {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
 .goingTitle {
-  grid-column: 1/5;
+  grid-column: 1/3;
   justify-self: center;
   order: 1;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #4285f4;
 }
 
@@ -31,11 +33,11 @@
 }
 
 .togetherTitle {
-  grid-column: 1/5;
+  grid-column: 1/3;
   justify-self: center;
   order: 3;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #0f9d58;
   padding: 30px;
 }
@@ -51,4 +53,9 @@
 
 .members h1 {
   text-align: center;
+}
+
+.username {
+  font-size: 1.5rem;
+  margin: 0;
 }
