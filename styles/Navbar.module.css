@@ -25,3 +25,23 @@
 .links a:hover {
   color: #4979ff;
 }
+
+@media (min-width: 1020px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+
+  .links {
+    justify-content: flex-end;
+    font-size: 1.5rem;
+  }
+  .links a {
+    margin-left: 20px;
+  }
+}
