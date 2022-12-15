@@ -6,10 +6,10 @@ import { useRouter } from 'next/navigation';
 
 const form = () => {
   const random = Math.floor(Math.random() * 100) + 1;
-  const [username, setUsername] = useState('@shalihin');
-  const [email, setEmail] = useState('sha@gmail.com');
-  const [city, setCity] = useState('Sundbyberg');
-  const [country, setCountry] = useState('Singapore');
+  const [username, setUsername] = useState('@username');
+  const [email, setEmail] = useState('user@gmail.com');
+  const [city, setCity] = useState('City');
+  const [country, setCountry] = useState('Country');
   const [image, setImage] = useState(`https://avatars.dicebear.com/api/micah/${random}:seed.svg`);
   const router = useRouter();
 
