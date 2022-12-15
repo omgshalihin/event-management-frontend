@@ -32,4 +32,8 @@
   .formDesc p {
     text-align: center;
   }
+  .form {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 }

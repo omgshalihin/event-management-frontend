@@ -6,3 +6,10 @@
   font-size: 1.2rem;
   font-weight: 300;
 }
+
+@media (min-width: 1020px) {
+  .container {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
