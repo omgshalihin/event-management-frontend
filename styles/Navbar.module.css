@@ -11,6 +11,7 @@
 .logo {
   grid-row: 1/2;
   justify-self: center;
+  margin-left: 5%;
 }
 
 .links {
@@ -20,6 +21,7 @@
   flex-direction: row;
   font-size: 1.2em;
   justify-content: space-evenly;
+  margin-right: 5%;
 }
 
 .links a:hover {
