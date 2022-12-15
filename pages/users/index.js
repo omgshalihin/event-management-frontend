@@ -17,7 +17,7 @@ const Members = () => {
   };
 
   useEffect(() => {
-     const hey = async () => {
+     const getMembers = async () => {
       const response = await fetch('https://event-management-backend-production.up.railway.app/api/users');
       const data = await response.json(); // data is an array of objects
       setDatabaseData(data)
@@ -25,7 +25,7 @@ const Members = () => {
         props: { users: data },
       };
     };
-    hey();
+    getMembers();
   }, [databaseData])
 
   if (databaseData.length > 0) {
