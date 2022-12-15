@@ -1,21 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import styles from '../../styles/Members.module.css';
 
-// this runs before component is rendered
-export const getStaticProps = async () => {
-  const response = await fetch('https://event-management-backend-production.up.railway.app/api/users', { next: { revalidate: 1 } });
-  const data = await response.json(); // data is an array of objects
-  return {
-    props: { users: data },
-  };
-};
-
-// http://localhost:3000/users
-const Members = ({ users }) => {
+const Members = () => {
+  const [databaseData, setDatabaseData] = useState({});
   const router = useRouter();
+
   const toggleStatus = async id => {
     await fetch(`https://event-management-backend-production.up.railway.app/api/users/${id}`, {
       method: 'PATCH',
@@ -23,11 +15,24 @@ const Members = ({ users }) => {
     });
     router.push('/users');
   };
-  return (
 
+  useEffect(() => {
+     const hey = async () => {
+      const response = await fetch('https://event-management-backend-production.up.railway.app/api/users');
+      const data = await response.json(); // data is an array of objects
+      setDatabaseData(data)
+      return {
+        props: { users: data },
+      };
+    };
+    hey();
+  }, [databaseData])
+
+  if (databaseData.length > 0) {
+  return (
     <div className={styles.members}>
       <h1 className={styles.goingTitle}>Going Solo</h1>
-      {users.filter(user => user.status === false).map(user => (
+      {databaseData.filter(user => user.status === false).map(user => (
         <div key={user.id} className={`${styles.going}`}>
 
           <Image
@@ -46,7 +51,7 @@ const Members = ({ users }) => {
       ))}
 
       <h1 className={styles.togetherTitle}>Make Buddies</h1>
-      {users.filter(user => user.status === true).map(user => (
+      {databaseData.filter(user => user.status === true).map(user => (
         <div key={user.id} className={`${styles.together}`}>
 
           <Image
@@ -61,9 +66,9 @@ const Members = ({ users }) => {
           </Link>
         </div>
       ))}
-
     </div>
   );
 };
+}
 
 export default Members;
