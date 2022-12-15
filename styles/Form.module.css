@@ -26,3 +26,10 @@
   border-radius: 10px;
   padding: 15px 10px 15px 10px;
 }
+
+@media (min-width: 1020px) {
+  .formDesc h1,
+  .formDesc p {
+    text-align: center;
+  }
+}
