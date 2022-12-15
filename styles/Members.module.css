@@ -59,3 +59,19 @@
   font-size: 1.5rem;
   margin: 0;
 }
+
+@media (min-width: 1020px) {
+  .members {
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  .goingTitle {
+    grid-column: span 5;
+  }
+  .togetherTitle {
+    grid-column: span 5;
+  }
+}
