@@ -1,6 +1,6 @@
 ## Hackday Project Title: [`Evently Social`](https://event-management-frontend-production.up.railway.app/)
 
-Open [https://event-management-frontend-production.up.railway.app/](https://event-management-frontend-production.up.railway.app/) with your browser to see the result.
+Open [app](https://event-management-frontend-production.up.railway.app/) with your browser to see the result.
 
 ## Preview of Website
 
