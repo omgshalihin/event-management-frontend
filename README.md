@@ -1,6 +1,6 @@
-## Hackday Project Title: [`Evently Social`](https://event-management-frontend-production.up.railway.app/)
+## Hackday Project Title: [`Evently Social`](https://63d005432f6aa213f29a9105--fanciful-alfajores-29b19d.netlify.app/)
 
-Open [app](https://event-management-frontend-production.up.railway.app/) with your browser to see the result.
+Open [app](https://63d005432f6aa213f29a9105--fanciful-alfajores-29b19d.netlify.app/) with your browser to see the result.
 
 ## Preview of Website
 
